@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safiullah AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Safiullah AI</h1>
+            <p>Your Personal AI Assistant</p>
+            <button id="newChatButton" type="button">New Chat</button>
+        </header>
+
+        <section id="chat" aria-live="polite">
+            <div class="message assistant">
+                Assalam-o-Alaikum! Main aapki kya madad kar sakta hoon?
+            </div>
+        </section>
+
+        <form id="chatForm">
+            <input
+                id="message"
+                type="text"
+                maxlength="4000"
+                placeholder="Apna sawal likhein..."
+                autocomplete="off"
+                required
+            >
+            <button id="sendButton" type="submit">Send</button>
+        </form>
+
+        <p id="status" role="status"></p>
+        <footer>Built by Safiullah Khan</footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
